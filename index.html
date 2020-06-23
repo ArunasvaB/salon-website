@@ -1,0 +1,168 @@
+<html>
+<head>
+        <title>Flowers Hair Salon</title>
+
+        <!--Bootstrap & JQuery-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="text-center"><img id ='logo' src="images/logo2.jpg" height="200px" width="200px"></div>
+    <h3 class="text-center" style="color: red">Red Hairing Salon</h3>
+</header>
+
+<!-- nav bar taken from W3school -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="#services"><p style="color: red"><img src="https://img.icons8.com/ios-filled/50/000000/haircut.png" width="50px" height="50px"> Services We Offer</p></a></li>
+            <li class="nav-item active"><a class="nav-link" href="#experts"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/for-experienced.png" width="50px" height="50px"> Meet The Experts</p></a></li>
+            <li class="nav-item active"><a class="nav-link" href="#appointments"><p style="color: red"><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Make An Appointment</p></a></li>
+            <li class="nav-item active"><a class="nav-link" href="#where"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/user-location.png" width="50px" height="50px"> Where To Find Us</p></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--Services Div-->
+<div id="services" class="text-danger text-center container p-3 my-3 border border-danger">
+
+    <h1><img src="https://img.icons8.com/ios-filled/50/000000/haircut.png" width="50px" height="50px"> Services We Offer </h1>
+
+    <table class="table text-center text-danger table-borderless">
+        <tbody>
+        <tr>
+            <td>
+                <br>
+                <img  class="rounded" src="images/curls.jpg" height="200" width="200"> <br>
+                <h6>$20.00 Curls</h6>
+            </td>
+
+            <td>
+
+                <br>
+                <img  class="rounded" src="images/perm.jpg" height="200" width="200">
+                <h6>$15.00 Perm</h6>
+            </td>
+            <td>
+                <br>
+                <img  class="rounded" src="images/crew.jpg"   height="200" width="200">
+                <h6>$5.00 Crew Cut</h6>
+            </td>
+            <td>
+
+                <br>
+                <img  class="rounded" src="images/massage.jpg" height="200" width="200">
+                <h6>$20.00 Head Massage</h6>
+            </td>
+            <td>
+
+                <br>
+                <img  class="rounded" src="images/standard.jpg" height="200" width="200">
+                <h6>$10.00 Bangs</h6>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!--Experts Div grid and columns taken from W3Schools-->
+<div id="experts" class="text-danger text-center container p-3 my-3 border border-danger">
+    <h1><img src="https://img.icons8.com/wired/64/000000/for-experienced.png" width="50px" height="50px"> Meet The Experts </h1>
+    <table class="text-center table text-danger table-borderless">
+        <tbody class="text-center">
+        <tr class="text-center">
+            <td>
+                <br>
+                <img  class="rounded" src="images/ramonaflowers.jpg" height="200" width="200"> <br>
+                <h4>Ramona Flowers</h4>
+                <h6 style="text-align: center">
+                    Ramona channels her youthful creativity into hair styling. She will help you discover yourself by pushing your stylistic boundaries.
+                </h6>
+            </td>
+            <td>
+
+                <br>
+                <img   class="rounded"  src="images/beck.png" height="200" width="200"><br>
+                <h4>Beck</h4>
+                <h6 style="text-align: center">
+                    Few stylists have the versatility and years of experience like Beck. Years of working with famous celebrities has made him an expert in styling and cutting.
+                </h6>
+            </td>
+
+            <td>
+
+                <br>
+                <img   class="rounded"  src="images/cera.jpg" height="200" width="200"><br>
+                <h4>Michael Cera</h4>
+                <h6 style="text-align: center">
+                    Known for his soft spoken personality and amazing customer service skills, Michael Cera will impress you with his meticulous nature and attention to detail. Perfection is his habit.
+                </h6>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!--Appointments-->
+
+<div id="appointments" class="text-danger text-center container p-3 my-3 border border-danger">
+    <h1><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Book An Appointment </h1> <br>
+
+    <!-- dropdown from https://getbootstrap.com/-->
+
+    <div class="dropdown">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select An Expert
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item text-danger">Ramona Flowers</a>
+            <a class="dropdown-item text-danger">Beck</a>
+            <a class="dropdown-item text-danger">Michael Cera</a>
+        </div>
+    </div><br>
+
+    <!--form from W3schools-->
+    <form>
+        <fieldset>
+            <legend>Please Enter Your Info</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="phno">Phone Number:</label>
+            <input placeholder="xxx-xxx-xxxx"  type="text" id="phno" name="phno"><br><br>
+            <label for="card">Credit/Debit Card</label>
+            <input placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card"><br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+</div>
+
+<!--Address-->
+<div id="where" class="text-danger text-center container p-3 my-3 border border-danger">
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+
+
+</html>
