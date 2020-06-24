@@ -5,13 +5,21 @@
         <!--Bootstrap & JQuery-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src ="jquery.datetimepicker.full.js" ></script>
 
-
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -45,31 +53,31 @@
         <tr>
             <td>
                 <br>
-                <img  class="rounded" src="images/curls.jpg" height="200" width="200"> <br>
+                <img  class="img-fluid rounded images" src="images/curls.jpg"> <br>
                 <h6>$20.00 Curls</h6>
             </td>
 
             <td>
 
                 <br>
-                <img  class="rounded" src="images/perm.jpg" height="200" width="200">
+                <img  class="img-fluid rounded images" src="images/perm.jpg">
                 <h6>$15.00 Perm</h6>
             </td>
             <td>
                 <br>
-                <img  class="rounded" src="images/crew.jpg"   height="200" width="200">
+                <img  class="img-fluid rounded images" src="images/crew.jpg">
                 <h6>$5.00 Crew Cut</h6>
             </td>
             <td>
 
                 <br>
-                <img  class="rounded" src="images/massage.jpg" height="200" width="200">
+                <img  class="img-fluid rounded images" src="images/massage.jpg">
                 <h6>$20.00 Head Massage</h6>
             </td>
             <td>
 
                 <br>
-                <img  class="rounded" src="images/standard.jpg" height="200" width="200">
+                <img  class="img-fluid rounded images" src="images/standard.jpg">
                 <h6>$10.00 Bangs</h6>
             </td>
         </tr>
@@ -86,8 +94,9 @@
         <tr class="text-center">
             <td>
                 <br>
-                <img  class="rounded" src="images/ramonaflowers.jpg" height="200" width="200"> <br>
+                <img  class="img-fluid rounded images" src="images/ramonaflowers.jpg"> <br>
                 <h4>Ramona Flowers</h4>
+
                 <h6 style="text-align: center">
                     Ramona channels her youthful creativity into hair styling. She will help you discover yourself by pushing your stylistic boundaries.
                 </h6>
@@ -95,8 +104,9 @@
             <td>
 
                 <br>
-                <img   class="rounded"  src="images/beck.png" height="200" width="200"><br>
+                <img   class="img-fluid rounded images"  src="images/beck.png"><br>
                 <h4>Beck</h4>
+
                 <h6 style="text-align: center">
                     Few stylists have the versatility and years of experience like Beck. Years of working with famous celebrities has made him an expert in styling and cutting.
                 </h6>
@@ -105,10 +115,11 @@
             <td>
 
                 <br>
-                <img   class="rounded"  src="images/cera.jpg" height="200" width="200"><br>
+                <img   class="img-fluid rounded images"  src="images/cera.jpg"><br>
                 <h4>Michael Cera</h4>
+
                 <h6 style="text-align: center">
-                    Known for his soft spoken personality and amazing customer service skills, Michael Cera will impress you with his meticulous nature and attention to detail. Perfection is his habit.
+                    Known for his soft spoken personality and amazing customer service skills, Michael Cera will impress you with his meticulous nature and attention to detail.
                 </h6>
             </td>
 
@@ -123,8 +134,7 @@
 <div id="appointments" class="text-danger text-center container p-3 my-3 border border-danger">
     <h1><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Book An Appointment </h1> <br>
 
-
-    <label class="text-danger"><h4>Choose Your Expert</h4></label>
+    <label for = "expert"> <h3>Choose Your Expert </h3></label><br>
     <select id="expert" name="expert">
         <option value="Ramona Flowers">Ramona Flowers</option>
         <option value="Michael Cera">Michael Cera</option>
@@ -133,23 +143,25 @@
 
 
 
-
     <!--form from W3schools-->
     <br><form>
         <fieldset>
             <br>
-            <legend>Please Enter Your Info</legend>
+            <h3>Please Enter Your Info</h3>
             <label for="name">Full Name:</label><br>
             <input type="text" id="name" name="name"><br><br>
             <label for="phno">Phone Number</label><br>
             <input placeholder="xxx-xxx-xxxx"  type="text" id="phno" name="phno"><br><br>
             <label for="card">Credit/Debit Card</label><br>
-            <input  data-toggle="tooltip" data-placement="bottom" title="We ask for your card since in the event of no show $5 is charged" placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card"><br><br>
+            <input data-placement="bottom" placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card">
+            <p id="caution" class="hidden">We ask for your credit card so that in the event of a last minute cancellation we charge $5</p>
+
+
+            <label for="name">Date</label><br>
+                <input type="text" id="dateInput">
 
 
 
-            <label for="datepicker" >Enter Date</label>
-            <p><input type="text" id="datepicker" placeholder="Date"></p>
             <br>
 
             <br>
@@ -166,10 +178,7 @@
 
 
         <h1><img src="https://img.icons8.com/wired/64/000000/user-location.png" width="50px" height="50px"> Where To Find Us </h1><br>
-        <h4>
-
-       434 Sycamore Crescent, Ottawa, ON, K1N 737
-    </h4>
+        <h3>434 Sycamore Crescent, Ottawa, ON, K1N 737</h3>
 </div>
 
 
