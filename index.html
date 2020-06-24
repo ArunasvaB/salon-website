@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src ="jquery.datetimepicker.full.js" ></script>
 
 
 
@@ -19,7 +20,7 @@
 <header>
 
     <div class="text-center"><img id ='logo' src="images/logo2.jpg" height="200px" width="200px"></div>
-    <h1 class="text-center" style="color: red">Red Hairing Salon</h1>
+    <h1 class="text-center" style="color: #ff0000">Red Hairing Salon</h1>
 </header>
 
 <!-- nav bar taken from W3school -->
@@ -123,7 +124,7 @@
     <h1><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Book An Appointment </h1> <br>
 
 
-    <label class="text-danger"><h4>Choose Your Expert<h4></label>
+    <label class="text-danger"><h4>Choose Your Expert</h4></label>
     <select id="expert" name="expert">
         <option value="Ramona Flowers">Ramona Flowers</option>
         <option value="Michael Cera">Michael Cera</option>
@@ -138,23 +139,20 @@
         <fieldset>
             <br>
             <legend>Please Enter Your Info</legend>
-            <label for="name">Full Name:</label>
+            <label for="name">Full Name:</label><br>
             <input type="text" id="name" name="name"><br><br>
-            <label for="phno">Phone Number:</label>
+            <label for="phno">Phone Number</label><br>
             <input placeholder="xxx-xxx-xxxx"  type="text" id="phno" name="phno"><br><br>
-            <label for="card">Credit/Debit Card</label>
+            <label for="card">Credit/Debit Card</label><br>
             <input  data-toggle="tooltip" data-placement="bottom" title="We ask for your card since in the event of no show $5 is charged" placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card"><br><br>
 
 
-            <div class="input-group date text-danger" data-provide="datepicker">
-                <p>Date</p>
-                <input type="text" class="form-control">
-                <div class="input-group-addon">
-                    <span class="glyphicon glyphicon-th"></span>
-                </div>
-            </div>
 
+            <label for="datepicker" >Enter Date</label>
+            <p><input type="text" id="datepicker" placeholder="Date"></p>
+            <br>
 
+            <br>
             <button  id="submit">SUBMIT</button>
 
         </fieldset>
