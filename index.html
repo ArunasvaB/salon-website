@@ -19,17 +19,17 @@
 <header>
 
     <div class="text-center"><img id ='logo' src="images/logo2.jpg" height="200px" width="200px"></div>
-    <h3 class="text-center" style="color: red">Red Hairing Salon</h3>
+    <h1 class="text-center" style="color: red">Red Hairing Salon</h1>
 </header>
 
 <!-- nav bar taken from W3school -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="#services"><p style="color: red"><img src="https://img.icons8.com/ios-filled/50/000000/haircut.png" width="50px" height="50px"> Services We Offer</p></a></li>
-            <li class="nav-item active"><a class="nav-link" href="#experts"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/for-experienced.png" width="50px" height="50px"> Meet The Experts</p></a></li>
-            <li class="nav-item active"><a class="nav-link" href="#appointments"><p style="color: red"><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Make An Appointment</p></a></li>
-            <li class="nav-item active"><a class="nav-link" href="#where"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/user-location.png" width="50px" height="50px"> Where To Find Us</p></a></li>
+            <li class="nav-item "><a class="nav-link active" href="#services"><p style="color: red"><img src="https://img.icons8.com/ios-filled/50/000000/haircut.png" width="50px" height="50px"> Services We Offer</p></a></li>
+            <li class="nav-item "><a class="nav-link active" href="#experts"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/for-experienced.png" width="50px" height="50px"> Meet The Experts</p></a></li>
+            <li class="nav-item "><a class="nav-link active" href="#appointments"><p style="color: red"><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Make An Appointment</p></a></li>
+            <li class="nav-item"><a class="nav-link active" href="#where"><p style="color: red"><img src="https://img.icons8.com/wired/64/000000/user-location.png" width="50px" height="50px"> Where To Find Us</p></a></li>
         </ul>
     </div>
 </nav>
@@ -122,32 +122,41 @@
 <div id="appointments" class="text-danger text-center container p-3 my-3 border border-danger">
     <h1><img src="https://img.icons8.com/ios/50/000000/appointment-scheduling.png" width="50px" height="50px"> Book An Appointment </h1> <br>
 
-    <!-- dropdown from https://getbootstrap.com/-->
 
-    <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select An Expert
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item text-danger">Ramona Flowers</a>
-            <a class="dropdown-item text-danger">Beck</a>
-            <a class="dropdown-item text-danger">Michael Cera</a>
-        </div>
-    </div><br>
+    <label class="text-danger"><h4>Choose Your Expert<h4></label>
+    <select id="expert" name="expert">
+        <option value="Ramona Flowers">Ramona Flowers</option>
+        <option value="Michael Cera">Michael Cera</option>
+        <option value="Beck">Beck</option>
+    </select><br>
+
+
+
 
     <!--form from W3schools-->
-    <form>
+    <br><form>
         <fieldset>
+            <br>
             <legend>Please Enter Your Info</legend>
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="phno">Phone Number:</label>
             <input placeholder="xxx-xxx-xxxx"  type="text" id="phno" name="phno"><br><br>
             <label for="card">Credit/Debit Card</label>
-            <input placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card"><br><br>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date"><br><br>
-            <input type="submit" value="Submit">
+            <input  data-toggle="tooltip" data-placement="bottom" title="We ask for your card since in the event of no show $5 is charged" placeholder="xxxx xxxx xxxx xxxx"  type="card" id="card" name="card"><br><br>
+
+
+            <div class="input-group date text-danger" data-provide="datepicker">
+                <p>Date</p>
+                <input type="text" class="form-control">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+
+
+            <button  id="submit">SUBMIT</button>
+
         </fieldset>
     </form>
 
@@ -156,12 +165,21 @@
 <!--Address-->
 <div id="where" class="text-danger text-center container p-3 my-3 border border-danger">
 
+
+
+        <h1><img src="https://img.icons8.com/wired/64/000000/user-location.png" width="50px" height="50px"> Where To Find Us </h1><br>
+        <h4>
+
+       434 Sycamore Crescent, Ottawa, ON, K1N 737
+    </h4>
 </div>
 
 
 
 
-<script src="script.js"></script>
+<script src="app.js" charset="utf-8"></script>
+
+
 </body>
 
 
